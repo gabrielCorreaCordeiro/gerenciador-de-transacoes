@@ -38,7 +38,7 @@ public class ScheduleDAO {
       essa função não apaga os registros que já foram lidos. Apenas guarda o idoperacao do ultimo para depois pegar mais 
       30 registros a partir daquele*/
      public static  ArrayList<Operation>  SearchAllAfterId() throws SQLException, FileNotFoundException, IOException, ClassNotFoundException{
-        Connect("apsbd2", "gabriel", "menegatgabri");
+        Connect("BANCO", "USUARIO", "SENHA");
         
         ArrayList<Operation> temp = new ArrayList<>(); // Lista que será guardado os registros. Cada registro é do tipo Operation
 
