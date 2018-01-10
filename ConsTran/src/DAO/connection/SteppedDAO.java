@@ -32,7 +32,7 @@ public class SteppedDAO {
      
     public static void setOperationStepped(Operation o) throws SQLException, ClassNotFoundException{
            //System.out.println("imprimindo no bd");
-           Connect("apsbd2", "gabriel", "menegatgabri");
+           Connect("BANCO", "USUARIO", "SENHA");
            String sql = "insert into stepped (indicetransacao, operacao, itemdado, timestampj) VALUES (?, ?, ?, ?)";
            PreparedStatement stm = con.prepareStatement(sql);
 
@@ -46,7 +46,7 @@ public class SteppedDAO {
     }
     // recupero todos as operações que estao causando deadlock e excluo elas do banco
     public static ArrayList<Operation> getOperationsInDeadLock(Operation e) throws SQLException, ClassNotFoundException{
-        Connect("apsbd2", "gabriel", "menegatgabri");
+        Connect("BANCO", "USUARIO", "SENHA");
         ArrayList<Operation> temp = new ArrayList<>(); // Lista que será guardado os registros. Cada registro é do tipo Operation
 
             String id = e.getIndice();
